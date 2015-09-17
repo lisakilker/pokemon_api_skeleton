@@ -1,9 +1,9 @@
-var PokemonModel = function (id) {
+var Pokemon = function (id) {
   this.id = id
   this.url = "/api/pokemon/"
 }
 
-PokemonModel.prototype.fetch = function (callback) {
+Pokemon.prototype.fetch = function (callback) {
   var request = $.get(`${this.url}${this.id}`)
 
   request.done(function(pokemonInfo) {
@@ -13,4 +13,4 @@ PokemonModel.prototype.fetch = function (callback) {
   }.bind(this))
 }
 
-module.exports = PokemonModel
+module.exports = Pokemon

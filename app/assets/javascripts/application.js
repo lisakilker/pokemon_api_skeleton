@@ -16,5 +16,7 @@
 
 var $container = $(".pokedex-container");
 var Router = require("./app_router.js");
+var Pokemon = require("./models/pokemon.js")
 
 window.router = new Router($container);
+window.pokemon = new Pokemon()
